@@ -66,4 +66,4 @@ At this stage, you should have:
 - Downloaded and transferred the E. coli reference genome
 - Built a Bowtie2-compatible genome index
 
-In the next step, we will align the sequencing reads to this reference genome using Bowtie2.
+Next [Step 6: Aligning Reads to the Reference Genome Using Bowtie2](https://github.com/jagan-l/bversity-seedweek-bioinfo/blob/main/session-2_bioinformatics/06_align_reads.md)
