@@ -22,7 +22,7 @@ Each step is explained in a separate markdown file so you can follow them one at
 
 | Step | Description | Link |
 |------|-------------|------|
-| 0 | Connect to your server via SSH | [#step-0-connect-to-the-remote-server](https://github.com/jagan-l/bversity-seedweek-bioinfo/new/main/session-2_bioinformatics#step-0-connect-to-the-remote-server) |
+| 0 | Connect to your server via SSH | [step-0-connect-to-the-remote-server](https://github.com/jagan-l/bversity-seedweek-bioinfo/tree/main/session-2_bioinformatics#step-0-connect-to-the-remote-server) |
 | 1 | Install Conda and set up Bioconda | [01_conda_installation.md](https://github.com/jagan-l/bversity-seedweek-bioinfo/blob/main/session-2_bioinformatics/01_conda_installation.md) |
 | 2 | Install the SRA Toolkit | [02_sra_tools.md](https://github.com/jagan-l/bversity-seedweek-bioinfo/blob/main/session-2_bioinformatics/02_sra_tools.md) |
 | 3 | Download sequencing data and convert to FASTQ | [03_download_sra_data.md](https://github.com/jagan-l/bversity-seedweek-bioinfo/blob/main/session-2_bioinformatics/03_download_sra_data.md) |
