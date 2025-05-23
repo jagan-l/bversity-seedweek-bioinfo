@@ -1,104 +1,82 @@
 # Step 4: Quality Control with FastQC and MultiQC
 
-Now that we’ve downloaded and converted our sequencing data into FASTQ format, it’s time to check the quality of these reads. Poor-quality data can lead to unreliable downstream analysis, so this step is critical.
+Before aligning reads to a reference genome, it's important to check the quality of the sequencing data. This step helps identify issues such as low-quality base calls, adapter contamination, and inconsistent read lengths.
 
-We’ll use two widely used tools:
-- **FastQC**: Provides quality metrics for individual FASTQ files.
-- **MultiQC**: Aggregates FastQC reports into a single, readable summary.
+We’ll use two tools:
+- FastQC to perform per-sample quality checks
+- MultiQC to summarize FastQC results across multiple files
 
----
+## 1. Install and Run FastQC
 
-## Step 1: Create and Activate a FastQC Environment
+First, create a new Conda environment for FastQC:
 
-Start by creating a new environment for FastQC:
 ```bash
 conda create -n fastqc_env
 conda activate fastqc_env
 ```
 
-Now install FastQC using Bioconda:
+Then, install FastQC:
+
 ```bash
 conda install bioconda::fastqc
 ```
 
----
+Assuming your FASTQ files are named `SRR11866736_1.fastq` and `SRR11866736_2.fastq`, create an output directory:
 
-## Step 2: Run FastQC on Your FASTQ Files
-
-Let’s assume your downloaded files are named:
-- `SRR11866736_1.fastq`
-- `SRR11866736_2.fastq`
-
-First, create an output directory:
 ```bash
-mkdir  fastqc_out
+mkdir -p fastqc_out
 ```
 
-Run FastQC:
+Run FastQC on the files:
+
 ```bash
 fastqc SRR11866736_1.fastq SRR11866736_2.fastq -o fastqc_out/
 ```
 
-This generates `.html` and `.zip` reports for each FASTQ file.
+This will generate `.html` and `.zip` reports for each FASTQ file.
 
-> Output files will be saved in the `fastqc_out` folder.
+## 2. Summarize Results with MultiQC
 
----
+Create a new Conda environment for MultiQC:
 
-## Step 3: Install and Run MultiQC
-
-Now we’ll summarize the individual reports using MultiQC.
-
-First, create a new environment:
 ```bash
 conda create -n multiqc_env
 conda activate multiqc_env
 ```
 
 Install MultiQC:
+
 ```bash
 conda install bioconda::multiqc
 ```
 
-Run MultiQC on the FastQC output directory:
+Run MultiQC on the FastQC output folder:
+
 ```bash
 multiqc fastqc_out/ -o fastqc_out/
 ```
 
-This will generate a single `multiqc_report.html` summarizing all quality checks.
+This will generate a single HTML report that consolidates results from all FastQC reports.
 
----
+## 3. Download the Report to Your Local Machine
 
-## Step 4: Download the MultiQC Report to Your Local System
+To view the `multiqc_report.html` on your local machine, use `rsync` to copy it from the remote server:
 
-### 🔹 What is `rsync`?
-`rsync` is a fast and secure utility for copying files between machines. It works over SSH, which means your data is encrypted during transfer.
-
-### 🔹 Basic Syntax
 ```bash
-rsync [options] user@remote_host:/path/to/file /local/destination
+rsync -avz username@remote.server:/path/to/fastqc_out/multiqc_report.html ./
 ```
 
-### 🔹 Common Options Used:
-- `-a`: archive mode, preserves permissions and timestamps
-- `-v`: verbose mode, shows progress
-- `-z`: compress file data during the transfer (saves bandwidth)
+### Explanation of Flags:
+- `-a`: archive mode, preserves metadata
+- `-v`: verbose output
+- `-z`: compress file data during transfer
 
-### 🔹 Example Command
-Run this on your **local laptop**:
-```bash
-rsync -avz jagan@10.0.0.1:/home/jagan/bioinfo_project/fastqc_out/multiqc_report.html .
-```
+Replace `username@remote.server` and the file path with your actual SSH credentials and directory location.
 
-Replace:
-- `jagan@10.0.0.1` with your actual remote SSH login
-- `/home/jagan/...` with the full path to the `multiqc_report.html` file on the server
-- `./` with your desired destination folder on the laptop
+## Summary
 
-This command securely downloads the MultiQC report to your current working directory.
+You now have a clear understanding of your sequencing data quality and a local copy of the summary report.
 
----
+Next, we’ll prepare the reference genome and set up for alignment.
 
-You now have a comprehensive view of your sequencing data quality and a local copy of the summary report for reference or sharing.
-
-➡️ Next, we’ll move on to reference genome preparation in [05_bowtie2_setup.md](05_bowtie2_setup.md).
+Next: [Step 5 – Setting Up Bowtie2 and Preparing the Reference Genome](https://github.com/jagan-l/bversity-seedweek-bioinfo/blob/main/session-2_bioinformatics/05_bowtie2_setup.md)
