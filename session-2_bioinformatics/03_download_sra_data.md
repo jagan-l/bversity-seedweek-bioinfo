@@ -1,56 +1,51 @@
 # Step 3: Downloading and Converting SRA Data
 
-Now that we’ve installed the SRA Toolkit, let’s download real sequencing data from the **NCBI Sequence Read Archive (SRA)** and convert it into the FASTQ format used for downstream analysis.
+With the SRA Toolkit installed, we’re now ready to retrieve sequencing data from NCBI’s Sequence Read Archive (SRA). This step will guide you through downloading a dataset and converting it into the FASTQ format, which is required for downstream analysis.
 
----
+## 1. Select a Dataset
 
-## Goal
-We will:
-- Use the `prefetch` command to download `.sra` files from NCBI
-- Convert those `.sra` files into `.fastq` format using `fastq-dump`
-
----
-
-## Choosing a Dataset
-For this session, we’ll use **Escherichia coli** genome sequencing data:
-- Project: [SRX8417101](https://www.ncbi.nlm.nih.gov/sra/SRX8417101)
+For this workshop, we’ll use an example dataset from *Escherichia coli*:
+- BioProject: [SRX8417101](https://www.ncbi.nlm.nih.gov/sra/SRX8417101)
 - Run Accession: `SRR11866736`
 
----
+This run contains paired-end reads from Illumina MiSeq sequencing.
 
-## Step 1: Download the `.sra` File
+## 2. Download the `.sra` File Using `prefetch`
 
-Make sure you are in your `sra_tools` environment:
+Ensure you are inside the `sra_tools` Conda environment:
+
 ```bash
 conda activate sra_tools
 ```
 
-Now use the `prefetch` command:
+Then, use the `prefetch` command to download the SRA file:
+
 ```bash
 prefetch SRR11866736
 ```
 
-This downloads the `.sra` file into a default directory (usually `~/ncbi/public/sra`).
+This will download a file named `SRR11866736.sra` to your SRA data directory (commonly under `~/ncbi/public/sra`).
 
-> You can customize the download directory with the `-O` option.
+> Tip: Use the `-O` flag with `prefetch` to specify a custom output directory if needed.
 
----
+## 3. Convert `.sra` to `.fastq` Using `fastq-dump`
 
-## Step 2: Convert `.sra` to `.fastq`
+Next, convert the downloaded file into standard FASTQ format:
 
-To convert the `.sra` file to FASTQ format:
 ```bash
 fastq-dump --split-spot SRR11866736/SRR11866736.sra
 ```
 
-### Explanation:
-- `--split-spot`: splits paired-end reads properly into two `.fastq` files
-- You’ll get: `SRR11866736_1.fastq` and `SRR11866736_2.fastq`
+### What This Command Does:
+- `--split-spot`: ensures paired-end reads are split correctly into two output files.
+- Output: two FASTQ files named `SRR11866736_1.fastq` and `SRR11866736_2.fastq`
 
-> Tip: Use `--gzip` if you want to compress the output FASTQ files to save space.
+> You can optionally add `--gzip` to compress the output FASTQ files.
 
----
+## Summary
 
-You now have your raw sequence files downloaded and ready for quality control.
+You have now successfully downloaded and converted sequencing data from the SRA. The resulting FASTQ files are ready for quality control and further processing.
 
-➡️ Proceed to [04_fastqc_multiqc.md](04_fastqc_multiqc.md) to evaluate the quality of these reads using FastQC and MultiQC.
+In the next step, we will assess the quality of these files using FastQC and summarize the results with MultiQC.
+
+Next: [Step 4 – Quality Control with FastQC and MultiQC](https://github.com/jagan-l/bversity-seedweek-bioinfo/blob/main/session-2_bioinformatics/04_fastqc_multiqc.md)
