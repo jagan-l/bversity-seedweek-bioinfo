@@ -1,58 +1,43 @@
-# Step 2: Setting Up SRA Toolkit in a Conda Environment
+# Step 2: Setting Up the SRA Toolkit
 
-In this step, we'll install the **SRA Toolkit**, a collection of command-line utilities for accessing and downloading sequencing data hosted in the NCBI Sequence Read Archive (SRA).
+Now that Conda and Bioconda are installed, we're ready to begin working with real sequencing data. In this step, we will set up the **SRA Toolkit**, a command-line suite provided by NCBI for accessing sequencing data stored in the Sequence Read Archive (SRA).
 
-To avoid conflicts and ensure clean reproducibility, we’ll install it in a dedicated Conda environment.
+The toolkit includes utilities such as `prefetch` and `fastq-dump`, which are commonly used to retrieve and convert raw sequencing data.
 
----
+## 1. Create a Conda Environment for SRA Tools
 
-## Creating a Conda Environment for SRA Toolkit
-
-Open your terminal and run:
+To keep things organized, we'll install the toolkit in its own environment:
 
 ```bash
 conda create -n sra_tools
-```
-
-This creates a new environment called `sra_tools`. You can name it anything, but naming it after the tool helps keep things organized.
-
-Now activate the environment:
-
-```bash
 conda activate sra_tools
 ```
 
-Once activated, your terminal prompt should change to indicate you're inside the `sra_tools` environment.
+This creates and activates a clean environment where the SRA Toolkit can be installed without affecting other tools.
 
----
+## 2. Install the SRA Toolkit
 
-## Installing the SRA Toolkit with Bioconda
-
-Make sure you've already set up Bioconda as outlined in [Step 1](https://github.com/jagan-l/bversity-seedweek-bioinfo/blob/main/session-2_bioinformatics/01_conda_installation.md#setting-up-bioconda-channels).
-
-Install the toolkit by running:
+Once inside the `sra_tools` environment, install the toolkit from Bioconda:
 
 ```bash
 conda install bioconda::sra-tools
 ```
 
-This command pulls the latest compatible version of the SRA Toolkit from Bioconda.
+This installs the latest available version along with its dependencies.
 
----
+## 3. Verify the Installation
 
-## Verifying the Installation
-
-After installation, check that the toolkit was installed correctly by running:
+To confirm the toolkit is working correctly, try running the following commands:
 
 ```bash
 prefetch --help
 fastq-dump --help
 ```
 
-These two are commonly used commands:
-- `prefetch`: Downloads `.sra` files from NCBI using accession numbers.
-- `fastq-dump`: Converts `.sra` files into standard `.fastq` format.
+If these commands return help menus and usage examples, your setup is complete.
 
-You’re now ready to download real sequencing data from SRA.
+## Summary
 
-➡️ Move to [03_download_sra_data.md](03_download_sra_data.md) to learn how to fetch and convert sequencing datasets.
+At this point, you’ve installed and verified the SRA Toolkit. In the next step, we will use it to download a publicly available dataset from the NCBI Sequence Read Archive and convert it to FASTQ format for further analysis.
+
+ Next: [Step 3 – Downloading and Converting SRA Data](https://github.com/jagan-l/bversity-seedweek-bioinfo/blob/main/session-2_bioinformatics/03_download_sra_data.md)
