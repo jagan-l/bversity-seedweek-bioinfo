@@ -58,3 +58,5 @@ This ensures that Conda pulls packages from the most appropriate and reliable so
 With Miniconda installed and Bioconda configured, your system is now ready to install tools used in genomics, transcriptomics, and other areas of computational biology.
 
 In the next step, we’ll use this setup to install the SRA Toolkit for downloading sequencing data from NCBI.
+
+Next: [Step 2 – Setting Up the SRA Toolkit](https://github.com/jagan-l/bversity-seedweek-bioinfo/blob/main/session-2_bioinformatics/02_sra_tools.md)
