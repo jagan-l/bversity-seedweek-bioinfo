@@ -64,5 +64,3 @@ Once you're logged in, move to your project directory and start with Step 1.
 ## Start Here
 
 After you connect to the remote server, start with [Step 1: Conda installation and setup](https://github.com/jagan-l/bversity-seedweek-bioinfo/blob/main/session-2_bioinformatics/01_conda_installation.md)
-
-This setup gives you a solid base to build more advanced workflows in the future.
