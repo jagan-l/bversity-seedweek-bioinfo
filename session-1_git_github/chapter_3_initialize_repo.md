@@ -62,4 +62,4 @@ The diagram below shows how files move from the working directory to the reposit
 
 In the next chapter, we will add files to Git and commit the first snapshot of our project.
 
-Next: [Chapter 4 – Adding and Committing Files](chapter_4_add_commit.md)
+Next: [Chapter 4 – Adding and Committing Files](https://github.com/jagan-l/bversity-seedweek-bioinfo/blob/main/session-1_git_github/chapter_4_add_commit.md)
