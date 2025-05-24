@@ -68,4 +68,4 @@ Understanding how to undo and review changes helps reduce the fear of making mis
 
 In the next chapter, we’ll look at how to work with remote repositories to collaborate with others on GitHub.
 
-Next: [Chapter 8 – Using Remotes and GitHub](chapter_8_remotes.md)
+Next: [Chapter 8 – Using Remotes and GitHub](https://github.com/jagan-l/bversity-seedweek-bioinfo/blob/main/session-1_git_github/chapter_8_remotes.md)
