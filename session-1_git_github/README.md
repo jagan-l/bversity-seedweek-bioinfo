@@ -25,4 +25,4 @@ Git addresses these issues by enabling you to:
 
 Using Git is a foundational skill that supports good research practices, especially when working on complex or long-term projects.
 
-Next: [Chapter 2 – Setting Up Git](chapter_2_git_setup.md)
+Next: [Chapter 2 – Setting Up Git](https://github.com/jagan-l/bversity-seedweek-bioinfo/blob/main/session-1_git_github/chapter_2_git_setup.md)
