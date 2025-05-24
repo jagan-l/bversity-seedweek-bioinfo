@@ -66,4 +66,4 @@ to see a history of all commits.
 
 In the next chapter, we’ll look at how Git handles file modifications and how to manage tracked vs staged changes.
 
-Next: [Chapter 5 – Managing Modified Files](chapter_5_manage_changes.md)
+Next: [Chapter 5 – Managing Modified Files](https://github.com/jagan-l/bversity-seedweek-bioinfo/blob/main/session-1_git_github/chapter_5_manage_changes.md)
