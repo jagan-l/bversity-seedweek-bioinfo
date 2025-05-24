@@ -58,4 +58,4 @@ This means your computer is securely connected to GitHub using SSH.
 
 In the next chapter, we’ll initialize a Git repository and begin tracking files.
 
-Next: [Chapter 3 – Initializing a Repository](chapter_3_initialize_repo.md)
+Next: [Chapter 3 – Initializing a Repository](https://github.com/jagan-l/bversity-seedweek-bioinfo/blob/main/session-1_git_github/chapter_3_initialize_repo.md)
