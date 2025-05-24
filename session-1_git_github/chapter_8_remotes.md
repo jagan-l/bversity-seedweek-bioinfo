@@ -61,4 +61,4 @@ Remote repositories allow you to:
 
 In the next chapter, we’ll walk through a basic collaboration workflow using remotes, where multiple people push and pull changes to the same project.
 
-Next: [Chapter 9 – Collaborating with Git](chapter_9_collaboration.md)
+Next: [Chapter 9 – Collaborating with Git](https://github.com/jagan-l/bversity-seedweek-bioinfo/blob/main/session-1_git_github/chapter_9_collaboration.md)
