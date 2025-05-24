@@ -50,4 +50,4 @@ This separation helps you carefully choose what gets saved at each step.
 
 In the next chapter, we’ll explore how to rename, delete, or ignore files in your repository the correct way using Git commands.
 
-Next: [Chapter 6 – Moving, Removing, and Ignoring Files](chapter_6_file_management.md)
+Next: [Chapter 6 – Moving, Removing, and Ignoring Files](https://github.com/jagan-l/bversity-seedweek-bioinfo/blob/main/session-1_git_github/chapter_6_file_management.md)
