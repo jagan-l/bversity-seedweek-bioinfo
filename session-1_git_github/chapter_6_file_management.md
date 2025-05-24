@@ -66,4 +66,4 @@ Tracking large or auto-generated files makes your repository slower, harder to m
 
 In the next chapter, we’ll explore how to undo changes, unstage files, and review commit history.
 
-Next: [Chapter 7 – Undoing and Reviewing Changes](chapter_7_undo_review.md)
+Next: [Chapter 7 – Undoing and Reviewing Changes](https://github.com/jagan-l/bversity-seedweek-bioinfo/blob/main/session-1_git_github/chapter_7_undo_review.md)
