@@ -33,11 +33,11 @@ This will download a file named `SRR11866736.sra` to your SRA data directory (co
 Next, convert the downloaded file into standard FASTQ format:
 
 ```bash
-fastq-dump --split-spot SRR11866736/SRR11866736.sra
+fastq-dump --split-files SRR11866736/SRR11866736.sra
 ```
 
 ### What This Command Does:
-- `--split-spot`: ensures paired-end reads are split correctly into two output files.
+- `--split-files`: ensures paired-end reads are split correctly into two output files.
 - Output: two FASTQ files named `SRR11866736_1.fastq` and `SRR11866736_2.fastq`
 
 > You can optionally add `--gzip` to compress the output FASTQ files.
