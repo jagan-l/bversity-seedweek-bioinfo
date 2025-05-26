@@ -32,7 +32,7 @@ Each step is explained in a separate markdown file so you can follow them one at
 
 ---
 
-## Step 0: Connect to the Remote Server
+### Step 0: Connect to the Remote Server
 
 To run these steps, you need access to a Linux server. Connect from your laptop using SSH:
 
@@ -46,9 +46,17 @@ ssh your_username@remote_server_ip
 ssh jagan@10.0.0.1
 ```
 
-Once you're logged in, move to your project directory and start with Step 1.
+To find your **remote server IP**, open your Google Cloud Console and navigate to:  
+**Compute Engine → VM Instances → External IP** column.
 
----
+To check your **username**, log in via browser SSH and run:
+
+```bash
+whoami
+```
+
+Once you're logged in, move to your project directory and start with Step 1.
+If you're having trouble accessing your VM via SSH from your terminal, click here [troubleshooting ssh setup](https://github.com/jagan-l/bversity-seedweek-bioinfo/blob/main/session-2_bioinformatics/secure_ssh_setup.md)
 
 ---
 
