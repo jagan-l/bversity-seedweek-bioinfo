@@ -25,15 +25,13 @@ For this example, we'll align our reads to the Escherichia coli K-12 substr. MG1
 2. Search for "E. coli K-12 substr. MG1655"
 3. Select the appropriate assembly and download the genomic FASTA file (`.fna`) to your local machine
 
-## 3. Transfer the Genome File to the Server
-
-After downloading the genome file, transfer it to your working server using the `scp` command:
-
+Or you can directly download the genome from this [link](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/) using wget:
 ```bash
-scp /path/to/GCF_000005845.2_ASM584v2_genomic.fna username@remote.server:/path/to/destination/
-```
+wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.fna.gz
 
-Replace the placeholder paths and credentials with your actual file location, server address, and username.
+#unzip the .gz
+gunzip GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.fna.gz
+```
 
 ## 4. Build the Genome Index
 
